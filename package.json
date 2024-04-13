@@ -1,0 +1,22 @@
+{
+  "name": "sort-view",
+  "version": "1.0.0",
+  "description": "Different types of sort with visual representation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/virajvd/sort-view.git"
+  },
+  "keywords": [
+    "sort"
+  ],
+  "author": "Viraj Dharme",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/virajvd/sort-view/issues"
+  },
+  "homepage": "https://github.com/virajvd/sort-view#readme"
+}
