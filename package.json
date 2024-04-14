@@ -1,6 +1,6 @@
 {
   "name": "sort-view",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Different types of sort with visual representation",
   "main": "index.js",
   "scripts": {
