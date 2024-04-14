@@ -18,8 +18,7 @@ const colours = {
         magenta: "\x1b[35m",
         cyan: "\x1b[36m",
         white: "\x1b[37m",
-        gray: "\x1b[90m",
-        crimson: "\x1b[38m" // Scarlet
+        gray: "\x1b[90m"
     },
     bg: {
         black: "\x1b[40m",
@@ -54,6 +53,10 @@ module.exports.internalPrint2 = function internalPrint2(arr, sentence=undefined)
     let strConstruct = helper.arrToString(arr)+ "\t"
     if(sentence) strConstruct+=sentence
     console.log(colours.fg.red, strConstruct, colours.reset)
+}
+
+module.exports.explainPrint = function explainPrint(msg){
+    console.log(colours.fg.green, msg, colours.reset)
 }
 
 module.exports.swapPrint = function swapPrint(ind1, ind2, arr){
