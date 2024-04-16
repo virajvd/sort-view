@@ -12,3 +12,7 @@ npm install sort-view<br/><br/>
 1. bubblesort(array, view = boolean)<br/>
     This function takes 2 arguments where the view argument is optional to view how the sort is working at each step. The first argument is an array. The function returns a sorted array using bubblesort.
     <br/>
+
+2. insertionsort(array, view = boolean)<br/>
+    This function takes 2 arguments where the view argument is optional to view how the sort is working at each step. The first argument is an array. The function returns a sorted array using insertionsort.
+    <br/>
