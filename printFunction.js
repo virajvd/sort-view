@@ -59,6 +59,10 @@ module.exports.explainPrint = function explainPrint(msg){
     console.log(colours.fg.green, msg, colours.reset)
 }
 
+module.exports.intermediatePrint = function intermediatePrint(msg){
+    console.log(colours.fg.yellow, msg, colours.reset)
+}
+
 module.exports.swapPrint = function swapPrint(ind1, ind2, arr){
     process.stdout.write(' ')
     for(let index = 0; index<=Math.max(ind1,ind2);index++){
