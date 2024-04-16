@@ -25,7 +25,7 @@ module.exports.bubblesort = function bubblesort(arr, view = false){
         if (swapped===false) break
     }
     if(view){
-        print.finalPrint(arr, "Sorted array is: ")
+        print.finalPrint(arr, "Sorted array using Bubble Sort is: ")
     }
     return arr
 }
@@ -69,10 +69,10 @@ module.exports.insertionsort = function insertionsort(arr, view = false){
             }
             process.stdout.write(' |\n')            
         }       
-        console.log()
+        if(view) console.log()
     }
     if(view){
-        print.finalPrint(arr, "Sorted array is: ")
+        print.finalPrint(arr, "Sorted array using Insertion Sort is: ")
     }
     return arr
 }
