@@ -1,5 +1,7 @@
 {
     "sort_explaination":{
-        "bubblesort": "Bubble sort is a simple sorting algorithm that repeatedly steps through the input list element by element, comparing the current element with the one after it, swapping their values if needed. These passes through the list are repeated until no swaps have to be performed during a pass, meaning that the list has become fully sorted."
+        "bubblesort": "Bubble sort is a simple sorting algorithm that repeatedly steps through the input list element by element, comparing the current element with the one after it, swapping their values if needed. These passes through the list are repeated until no swaps have to be performed during a pass, meaning that the list has become fully sorted.",
+        "insertionsort": "Insertion sort iterates, consuming one input element each repetition, and grows a sorted output list. At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there and shifts the other elements to the right. It repeats until no input elements remain.",
+        "selectionsort": "Selection sort is an in-place comparison sorting algorithm. The algorithm divides the input list into two parts: a sorted sublist of items which is built up from left to right at the front (left) of the list and a sublist of the remaining unsorted items that occupy the rest of the list. The algorithm will repeatedly select the smallest element from unsorted list and insert it in sorted list till unsorted list is not empty"
     }
 }
