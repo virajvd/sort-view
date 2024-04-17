@@ -12,17 +12,25 @@ module.exports.bubblesort = function bubblesort(arr, view = false){
         swapped = false
         
         for(let j=0;j<arr.length-i;j++){
-            
+            if(view && (j+1)<arr.length) print.internalPrint2(arr, `Checking if value at index ${j} is greater than value at index ${j+1}`)
             if(arr[j]>arr[j+1]) {
-                if(view) {
-                    print.internalPrint2(arr)
-                    print.swapPrint(j,(j+1), arr)
+                if(view) {                    
+                    print.swapBubblePrint(j,(j+1), arr)
                 }
                 [arr[j],arr[j+1]] = [arr[j+1],arr[j]]
                 swapped = true
             }
+            else if(view && (j+1)<arr.length){
+                print.intermediatePrint("No swapping reuired")
+                console.log()
+            }
         }
-        if (swapped===false) break
+        if (swapped===false && i!=arr.length-1) {
+            if(view){
+                print.intermediatePrint("Since no swapping was done all elements are already sorted")
+            }
+            break
+        }
     }
     if(view){
         print.finalPrint(arr, "Sorted array using Bubble Sort is: ")
@@ -45,31 +53,7 @@ module.exports.insertionsort = function insertionsort(arr, view = false){
             j = j-1            
         }
         arr[j+1] = key
-        if(view && i==j+1){
-            print.internalPrint2(arr, `${key} already at its correct position`)
-        }
-        else if (view && i!=j+1){
-            print.internalPrint2(arr, `${key} at index ${i} moved to index ${(j+1)}`)
-            let k=0            
-            while(k<(j+1)){
-                process.stdout.write('  ')
-                k++
-            }
-            process.stdout.write(' ^')            
-            while(k<i){
-                if(k==i-1) process.stdout.write("=>")
-                else process.stdout.write("==")
-                k++
-            }
-            console.log()
-            k=0
-            while(k<(j+1)){
-                process.stdout.write('  ')
-                k++
-            }
-            process.stdout.write(' |\n')            
-        }       
-        if(view) console.log()
+        print.swapInsertionPrint(i,j+1,key,arr)
     }
     if(view){
         print.finalPrint(arr, "Sorted array using Insertion Sort is: ")
