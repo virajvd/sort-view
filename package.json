@@ -1,6 +1,6 @@
 {
   "name": "sort-view",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Different types of sort with visual representation",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/virajvd/sort-view.git"
   },
   "keywords": [
-    "sort"
+    "sort", "sort-view", "sort view", "view sort", "bubblesort", "insertionsort", "selectionsort"
   ],
   "author": "Viraj Dharme",
   "license": "ISC",
