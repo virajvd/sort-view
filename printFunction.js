@@ -63,7 +63,7 @@ module.exports.intermediatePrint = function intermediatePrint(msg){
     console.log(colours.fg.yellow, msg, colours.reset)
 }
 
-module.exports.swapBubblePrint = function swapBubblePrint(ind1, ind2, arr){
+module.exports.swapPrint = function swapPrint(ind1, ind2, arr){
     process.stdout.write(' ')
     for(let index = 0; index<=Math.max(ind1,ind2);index++){
         if(index==ind1 || index==ind2){
