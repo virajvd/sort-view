@@ -63,7 +63,7 @@ module.exports.intermediatePrint = function intermediatePrint(msg){
     console.log(colours.fg.yellow, msg, colours.reset)
 }
 
-module.exports.swapPrint = function swapPrint(ind1, ind2, arr){
+module.exports.swapBubblePrint = function swapBubblePrint(ind1, ind2, arr){
     process.stdout.write(' ')
     for(let index = 0; index<=Math.max(ind1,ind2);index++){
         if(index==ind1 || index==ind2){
@@ -87,3 +87,28 @@ module.exports.swapPrint = function swapPrint(ind1, ind2, arr){
     console.log(colours.fg.yellow, `Swapping ${arr[ind1]} and ${arr[ind2]} at index ${ind1} and ${ind2}\n`, colours.reset)
 }
 
+module.exports.swapInsertionPrint = function swapInsertionPrint(i,j,key, arr){
+    if(i==j) this.internalPrint2(arr, `${key} already at its correct position`)
+    else if(i!=j){
+        this.internalPrint2(arr, `${key} at index ${i} moved to index ${j}`)
+        let k=0            
+        while(k<(j)){
+            process.stdout.write('  ')
+            k++
+        }
+        process.stdout.write(' ^')            
+        while(k<i){
+            if(k==i-1) process.stdout.write("=>")
+            else process.stdout.write("==")
+            k++
+        }
+        console.log()
+        k=0
+        while(k<j){
+            process.stdout.write('  ')
+            k++
+        }
+        process.stdout.write(' |\n')
+    }
+    console.log()
+}
