@@ -15,7 +15,7 @@ module.exports.bubblesort = function bubblesort(arr, view = false){
             if(view && (j+1)<arr.length) print.internalPrint2(arr, `Checking if value at index ${j} is greater than value at index ${j+1}`)
             if(arr[j]>arr[j+1]) {
                 if(view) {                    
-                    print.swapBubblePrint(j,(j+1), arr)
+                    print.swapPrint(j,(j+1), arr)
                 }
                 [arr[j],arr[j+1]] = [arr[j+1],arr[j]]
                 swapped = true
@@ -59,4 +59,30 @@ module.exports.insertionsort = function insertionsort(arr, view = false){
         print.finalPrint(arr, "Sorted array using Insertion Sort is: ")
     }
     return arr
+}
+
+module.exports.selectionsort = function selectionsort(arr, view = false){
+    if(view) {
+        print.explainPrint(exp?.sort_explaination?.selectionsort)
+        print.internalPrint2(arr, "Initial Array")
+        console.log('----------------------------------------')
+    }
+    for (let i = 0; i < arr.length-1; i++){         
+        let k = i; 
+        if(view) print.internalPrint2(arr, `Lets fix ${arr[i]} at index ${i} and find the smallest value in rest of the unsorted array`)
+        for (j = i + 1; j < arr.length; j++) 
+        if (arr[j] < arr[k]) 
+            k = j; 
+        
+        if(view && i==k) {
+            print.intermediatePrint(`No swapping is required as ${arr[i]} is already the smallest value in rest of the unsorted array`)
+            console.log()
+        }
+        if(view && i!=k) print.swapPrint(i,k, arr);
+        [arr[i], arr[k]] = [arr[k], arr[i]]
+    }
+    if(view){
+        print.finalPrint(arr, "Sorted array using Selection Sort is: ")
+    }
+    return arr 
 }
