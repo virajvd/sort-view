@@ -19,5 +19,9 @@ module.exports.validate = function validate(input, view){
         print.printError("All array elements should be of type Number")
         error = true
     }
+    if(typeof(view)!=='boolean'){
+        print.printError("Second argument should be of type boolean")
+        error = true
+    }
     return error
 }
